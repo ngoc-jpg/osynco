@@ -1,0 +1,5 @@
+---
+globs: *
+alwaysApply: false
+---
+- All point-form text and list items should be full sentences and end with a period.

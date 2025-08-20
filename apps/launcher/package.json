@@ -1,0 +1,83 @@
+{
+    "$schema": "https://www.raycast.com/schemas/extension.json",
+    "name": "osynco-launcher",
+    "title": "OSYNCO",
+    "description": "Description of the extension.",
+    "icon": "icon-rounded-512.png",
+    "author": "ngoc-jpg",
+    "categories": [
+        "Productivity",
+        "Data",
+        "Documentation",
+        "Media",
+        "Applications",
+        "Web"
+    ],
+    "license": "MIT",
+    "commands": [
+        {
+            "name": "form-demo",
+            "title": "Form Demo",
+            "subtitle": "OSYNCO Form Demo",
+            "description": "Demo of the `Form` component.",
+            "mode": "view"
+        },
+        {
+            "name": "list-demo",
+            "title": "List Demo",
+            "subtitle": "OSYNCO List Demo",
+            "description": "Demo of the `List` component.",
+            "mode": "view"
+        }
+    ],
+    "dependencies": {
+        "@osynco/api": "workspace:*",
+        "@osynco/db": "workspace:*",
+        "@osynco/ui": "workspace:*",
+        "@osynco/validators": "workspace:*",
+        "@raycast/api": "^1.96.0",
+        "@raycast/utils": "^1.17.0",
+        "@tanstack/react-query": "catalog:",
+        "@trpc/client": "catalog:",
+        "@trpc/tanstack-react-query": "catalog:",
+        "luxon": "^3.6.1",
+        "react": "catalog:react19",
+        "superjson": "2.2.2"
+    },
+    "devDependencies": {
+        "@osynco/eslint-config": "workspace:*",
+        "@osynco/prettier-config": "workspace:*",
+        "@osynco/tsconfig": "workspace:*",
+        "@raycast/eslint-config": "^2.0.4",
+        "@types/luxon": "^3.6.2",
+        "@types/node": "^22.13.11",
+        "@types/react": "19.0.10",
+        "eslint": "^9.22.0",
+        "prettier": "^3.5.3",
+        "typescript": "catalog:"
+    },
+    "scripts": {
+        "build": "ray build",
+        "dev": "ray develop",
+        "format": "prettier --check . --ignore-path ../../.gitignore",
+        "lint:ray": "ray lint",
+        "lint:ray:fix": "ray lint --fix",
+        "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+        "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+        "publish": "npx @raycast/api@latest publish"
+    },
+    "prettier": "@osynco/prettier-config",
+    "platforms": [
+        "macOS"
+    ],
+    "preferences": [
+        {
+            "name": "user-id",
+            "title": "User ID",
+            "description": "Your unique User ID.",
+            "type": "password",
+            "required": true
+        }
+    ]
+}
