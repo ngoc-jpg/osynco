@@ -9,7 +9,7 @@ import superjson from "superjson"
 
 import type { AppRouter } from "@osynco/api"
 
-import { env } from "~/env"
+import { BASE_URL } from "~/constants"
 import { authClient } from "./auth"
 
 export const queryClient = new QueryClient({
@@ -31,7 +31,7 @@ export const trpc = createTRPCOptionsProxy<AppRouter>({
             }),
             httpBatchLink({
                 transformer: superjson,
-                url: `${env.EXPO_PUBLIC_BASE_URL}/api/trpc`,
+                url: `${BASE_URL}/api/trpc`,
                 headers() {
                     const headers = new Map<string, string>()
                     headers.set("x-trpc-source", "expo-react")

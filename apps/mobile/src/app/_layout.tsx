@@ -9,7 +9,7 @@ import { QueryClientProvider } from "@tanstack/react-query"
 import { queryClient } from "~/utils/api"
 
 import "~/utils/polyfills"
-import "../styles.ios"
+import "../styles.css"
 
 import { Splash } from "~/components/splash"
 import { useLoadedFonts } from "~/hooks/use-loaded-fonts"

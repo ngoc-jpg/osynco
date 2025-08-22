@@ -18,7 +18,7 @@ export function TabHeader({
     const profilePicture = { size: _ProfilePicture.size ?? 40, onPress: _ProfilePicture.onPress }
 
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const [assets] = useAssets([require("../../assets/examples/pfp-512.jpg")])
+    const [assets] = useAssets([require("../../assets/examples/pfp-512.png")])
     const { system, header } = useLayoutDimensions()
 
     return (
