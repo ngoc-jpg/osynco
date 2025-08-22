@@ -19,7 +19,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         bundleIdentifier: "com.ngoc-jpg.osynco",
         // supportsTablet: true,
         icon: {
-            light: "./assets/icon.png"
+            light: "./assets/icon-512.png"
             // dark: "./assets/icon.png"
             // tinted: "",
         }
@@ -27,7 +27,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     android: {
         package: "com.ngoc-jpg.osynco",
         adaptiveIcon: {
-            foregroundImage: "./assets/icon.png",
+            foregroundImage: "./assets/icon-512.png",
             backgroundColor: "#FFFFFF"
         }
     },

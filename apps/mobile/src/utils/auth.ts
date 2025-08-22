@@ -8,10 +8,10 @@ import { expoClient } from "@better-auth/expo/client"
 import { useQueryClient } from "@tanstack/react-query"
 import { createAuthClient } from "better-auth/react"
 
-import { env } from "~/env"
+import { BASE_URL } from "~/constants"
 
 const _authClient = createAuthClient({
-    baseURL: `${env.EXPO_PUBLIC_BASE_URL}/api/auth`,
+    baseURL: `${BASE_URL}/api/auth`,
     plugins: [
         expoClient({
             scheme: "osynco",
@@ -73,6 +73,8 @@ export const authClient = {
      * @deprecated Use `useSignOut` instead.
      */
     signOut: _authClient.signOut,
+
+    useSession: _authClient.useSession,
 
     useSignIn,
     useSignOut
